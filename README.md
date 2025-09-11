@@ -96,48 +96,48 @@ Admins should be able to:
 
 ### 5. 📑 MVP Features & Acceptance Criteria
 
-1. **Authentication & Roles**
+1. [**Authentication & Roles**](#authentication--role-management)
 
    * Email/password + Google OAuth.
    * Roles: Admin, Instructor, Student.
    * ✅ Acceptance: Admin-only dashboard is restricted.
 
-2. **Course Management (Instructor)**
+2. [**Course Management (Instructor)**](#course-management-instructor-side)
 
    * CRUD courses, add metadata (title, price, category).
    * Draft vs published states.
 
-3. **Lesson Management**
+3. [**Lesson Management**](#lesson-management)
 
    * Upload video, add notes/resources.
    * Drag & drop reorder.
 
-4. **Course Enrollment & Dashboard (Student)**
+4. [**Course Enrollment & Dashboard (Student)**](#course-enrollment--student-dashboard)
 
    * Enroll in free/paid courses.
    * Dashboard shows enrolled courses + progress.
 
-5. **Quizzes & Assignments**
+5. [**Quizzes & Assignments**](#quizzes--assignments)
 
    * Quizzes auto-graded (MCQ, T/F).
    * Assignments manual grading (file upload).
 
-6. **Certification**
+6. [**Certification**](#certification-system)
 
    * Auto-generated PDF upon course completion.
    * Unique verification link.
 
-7. **Payments**
+7. [**Payments**](#payments-stripe-integration)
 
    * Stripe Checkout (one-time payments).
    * Webhook ensures access only after payment success.
 
-8. **Admin Dashboard**
+8. [**Admin Dashboard**](#admin-dashboard)
 
    * Manage users & instructors.
    * View revenue analytics.
 
-9. **Discussions & Q\&A**
+9. [**Discussions & Q&A**](#discussions--qa)
 
    * Threaded questions per lesson.
    * Instructor badge for replies.
