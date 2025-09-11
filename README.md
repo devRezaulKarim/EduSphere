@@ -1,5 +1,3 @@
-# 📃 Documentation
-
 # (Project): **EduSphere LMS (Learning Management System)**
 
 ---
