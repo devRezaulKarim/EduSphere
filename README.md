@@ -1,4 +1,220 @@
-### 🔹 Features
+# 📃 Documentation
+
+# (Project): **EduSphere LMS (Learning Management System)**
+
+---
+
+### 1. 📌 Project Overview
+
+**EduSphere LMS** is a full-stack Learning Management System where instructors can create courses, students can enroll, learn, take quizzes/assignments, and earn certificates.
+
+Users should be able to:
+
+* Browse & enroll in free/paid courses
+* Access lessons with videos, resources & discussions
+* Attempt quizzes & submit assignments
+* Track progress via dashboard
+* Earn verifiable completion certificates
+* Pay securely via Stripe
+
+Admins should be able to:
+
+* Manage users, instructors & courses
+* Review platform analytics & revenue
+* Moderate discussions and content
+
+---
+
+### 2. 🎯 Goals & Non-Goals
+
+✅ **Goals (MVP):**
+
+* Role-based auth (Admin, Instructor, Student)
+* Course & lesson management
+* Quizzes, assignments & grading
+* Student dashboard with progress tracking
+* Secure Stripe payments
+* Certification system
+* Admin dashboard with user & revenue insights
+
+❌ **Non-Goals (Future Enhancements):**
+
+* AI-driven recommendations
+* Gamification (badges, leaderboards)
+* Multi-language support
+* Live streaming classes
+
+---
+
+### 3. 🏗️ Tech Stack & Architecture
+
+* **Frontend:** Next.js 15 (App Router), TypeScript, Tailwind CSS, ShadCN UI, React Query, Zustand/Redux (for global state)
+* **Backend:** Next.js API routes + Prisma ORM
+* **Database:** PostgreSQL (Supabase hosting)
+* **Auth:** Auth.js (NextAuth) with role-based access control
+* **Payments:** Stripe Checkout + Webhooks
+* **File Storage:** Supabase / AWS S3 (for videos, resources)
+* **Testing:** Vitest, Testing Library, Cypress (E2E)
+* **Deployment:** Vercel (frontend/backend), Supabase (DB & storage)
+
+**Architecture Diagram:**
+
+```
+[Next.js Frontend] → [Next.js API Routes] → [Prisma ORM] → [PostgreSQL DB]
+                                      |          |
+                               [Stripe API]   [File Storage]
+                                      |
+                                  [Auth.js RBAC]
+```
+
+---
+
+### 4. 📂 Project Structure (Proposed)
+
+```
+/src
+  /app
+    /courses
+    /dashboard
+    /lessons
+    /quizzes
+    /admin
+    /auth
+  /components
+    /ui
+    /forms
+    /dashboard
+  /lib
+  /store
+  /hooks
+  /tests
+/prisma
+  schema.prisma
+/public
+  /uploads (if local)
+```
+
+---
+
+### 5. 📑 MVP Features & Acceptance Criteria
+
+1. **Authentication & Roles**
+
+   * Email/password + Google OAuth.
+   * Roles: Admin, Instructor, Student.
+   * ✅ Acceptance: Admin-only dashboard is restricted.
+
+2. **Course Management (Instructor)**
+
+   * CRUD courses, add metadata (title, price, category).
+   * Draft vs published states.
+
+3. **Lesson Management**
+
+   * Upload video, add notes/resources.
+   * Drag & drop reorder.
+
+4. **Enrollment & Dashboard (Student)**
+
+   * Enroll in free/paid courses.
+   * Dashboard shows enrolled courses + progress.
+
+5. **Quizzes & Assignments**
+
+   * Quizzes auto-graded (MCQ, T/F).
+   * Assignments manual grading (file upload).
+
+6. **Certificates**
+
+   * Auto-generated PDF upon course completion.
+   * Unique verification link.
+
+7. **Payments**
+
+   * Stripe Checkout (one-time payments).
+   * Webhook ensures access only after payment success.
+
+8. **Admin Dashboard**
+
+   * Manage users & instructors.
+   * View revenue analytics.
+
+9. **Discussions & Q\&A**
+
+   * Threaded questions per lesson.
+   * Instructor badge for replies.
+
+---
+
+### 6. 🔐 API Contracts (Examples)
+
+* `POST /api/auth/login` → `{ token, role }`
+* `GET /api/courses` → `[ { id, title, price, published } ]`
+* `POST /api/enroll/:courseId` → `{ success: true }`
+* `POST /api/payment/checkout` → `{ url }`
+* `POST /api/quizzes/:quizId/submit` → `{ score }`
+* `GET /api/certificates/:id` → `{ url }`
+
+---
+
+### 7. ⚡ Performance & UX Considerations
+
+* SSR + SSG for SEO on course pages.
+* Lazy load lessons & videos.
+* Optimized DB queries (pagination, indexing).
+* Prefetch dashboard data after login.
+* Notifications for new replies in discussions.
+
+---
+
+### 8. 🧪 Testing Plan
+
+* **Unit Tests:** Auth, course CRUD, quiz grading.
+* **Integration Tests:** Enrollment + progress update.
+* **E2E Tests (Cypress):**
+
+  * Student signs up → enrolls in course → completes quiz → gets certificate.
+  * Admin suspends user → user cannot log in.
+
+---
+
+### 9. 🚀 Roadmap (High Level)
+
+**Phase 1 (2–3 weeks):**
+
+* Setup project, DB schema, Auth.js, role-based access.
+
+**Phase 2 (3–4 weeks):**
+
+* Course & lesson management.
+* Enrollment system & dashboard.
+
+**Phase 3 (3 weeks):**
+
+* Quizzes, assignments & progress tracking.
+
+**Phase 4 (2 weeks):**
+
+* Payments (Stripe) & certificates.
+
+**Phase 5 (2 weeks):**
+
+* Admin dashboard & discussions.
+
+---
+
+### 10. ❓ Open Questions
+
+* Should we allow **unenrollment & refunds** in MVP?
+* Do certificates **expire** or are they lifetime-valid?
+* Should admins be able to **manually enroll students**?
+* Do we support **discount codes/coupons** at launch?
+
+---
+---
+---
+
+### 🔹 Features List
 
 1. Authentication & Role Management
 2. Course Management (Instructor Side)
