@@ -46,7 +46,7 @@ Admins should be able to:
 
 ### 3. 🏗️ Tech Stack & Architecture
 
-* **Frontend:** Next.js 15 (App Router), TypeScript, Tailwind CSS, ShadCN UI, React Query, Zustand/Redux (for global state)
+* **Frontend:** Next.js 15 (App Router), TypeScript, Tailwind CSS, ShadCN UI, React Query, Zustand/Redux (for global state), nuqs (for URL state management)
 * **Backend:** Next.js API routes + Prisma ORM
 * **Database:** PostgreSQL (Supabase hosting)
 * **Auth:** Auth.js (NextAuth) with role-based access control
