@@ -112,7 +112,7 @@ Admins should be able to:
    * Upload video, add notes/resources.
    * Drag & drop reorder.
 
-4. **Enrollment & Dashboard (Student)**
+4. **Course Enrollment & Dashboard (Student)**
 
    * Enroll in free/paid courses.
    * Dashboard shows enrolled courses + progress.
@@ -122,7 +122,7 @@ Admins should be able to:
    * Quizzes auto-graded (MCQ, T/F).
    * Assignments manual grading (file upload).
 
-6. **Certificates**
+6. **Certification**
 
    * Auto-generated PDF upon course completion.
    * Unique verification link.
@@ -210,20 +210,6 @@ Admins should be able to:
 
 ---
 ---
----
-
-### 🔹 Features List
-
-1. Authentication & Role Management
-2. Course Management (Instructor Side)
-3. Lesson Management
-4. Course Enrollment & Dashboard (Student Side)
-5. Quizzes & Assignments
-6. Certification
-7. Admin Dashboard
-8. Payments (Stripe)
-9. Discussions & Q\&A
-
 ---
 
 # 📃 Authentication & Role Management
