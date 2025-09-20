@@ -11,7 +11,7 @@ export const Hero = () => {
           Empower your career with expert-led courses, interactive lessons, and
           certificates you can showcase anywhere.
         </p>
-        <div className="flex items-center gap-x-4 mt-8">
+        <div className="flex items-center flex-wrap gap-4 mt-8">
           <Button variant="secondary">🎓 Browse Courses</Button>
           <Button variant="outline">👨‍🏫 Become an Instructor</Button>
         </div>
@@ -21,8 +21,8 @@ export const Hero = () => {
           className="w-full h-auto"
           alt="Hero Image"
           src="/hero-image.png"
-          width={700}
-          height={400}
+          width={800}
+          height={800}
         />
       </div>
     </section>
