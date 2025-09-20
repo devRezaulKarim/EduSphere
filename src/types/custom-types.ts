@@ -4,3 +4,7 @@ export type Feature = {
   title: string;
   subtitle: string;
 };
+export type Route = {
+  label: string;
+  href: string;
+};
