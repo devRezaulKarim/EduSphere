@@ -7,8 +7,8 @@ export default function Home() {
   const [name, setName] = useQueryState("name");
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 container bg-accent">
+      <div className="bg-secondary w-full">
         <h1>Zustand Counter: {count}</h1>
         <button onClick={increment}>Increment</button>
         <button onClick={decrement}>Decrement</button>
