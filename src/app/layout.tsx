@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 import { NuqsAdapter } from "nuqs/adapters/next";
 import { Navbar } from "@/components/custom/navbar";
+import Footer from "@/components/custom/footer";
 
 export default function RootLayout({
   children,
@@ -31,6 +32,7 @@ export default function RootLayout({
         <NuqsAdapter>
           <Navbar />
           {children}
+          <Footer />
         </NuqsAdapter>
       </body>
     </html>

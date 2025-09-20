@@ -1,4 +1,4 @@
-import { Feature, Route } from "@/types/custom-types";
+import { Feature, Route, Step } from "@/types/custom-types";
 
 export const features: Feature[] = [
   {
@@ -55,5 +55,29 @@ export const routes: Route[] = [
   {
     label: "About",
     href: "/about",
+  },
+];
+
+export const howItWorks: Step[] = [
+  {
+    id: 1,
+    icon: "🔍",
+    title: "Discover & Enroll",
+    description:
+      "Explore a wide variety of free and premium courses tailored to your goals, then enroll with a single click.",
+  },
+  {
+    id: 2,
+    icon: "📖",
+    title: "Learn Your Way",
+    description:
+      "Watch high-quality video lessons, join community discussions, and complete interactive assignments at your own pace.",
+  },
+  {
+    id: 3,
+    icon: "🏆",
+    title: "Earn Your Certificate",
+    description:
+      "Finish the course and receive a verifiable certificate to showcase your new skills on LinkedIn, your résumé, or portfolio.",
   },
 ];
